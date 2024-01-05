@@ -1,0 +1,383 @@
+@import url('https://font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body, h1, h2, button, p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7vh;
+  background-color: white;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #00ff9d, #00ff04, #a6ff00) 1;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  
+}
+
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 50px;
+  background:linear-gradient(to right, #00ff9d, #00ff04, #8cff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+dialog{
+  opacity: 0;
+  scale: 0;
+  display: block;
+  transition: all 1s;
+  border: 3px solid;
+  border-image: linear-gradient(to right, #00ff9d, #00ff04, #a6ff00) 1;
+  border-radius: 10px;
+  
+}
+
+dialog[open] {
+  opacity: 1;
+  scale: 1.25;
+  
+}
+
+dialog::backdrop{
+  backdrop-filter: blur(10px);
+}
+
+input{
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transform: translateY(43vh);
+  z-index: -1;
+}
+
+.container {
+  width: 45%;
+  max-width: 30%;
+  height: 200px;
+  margin: 20px;
+  background-color: transparent;
+  border: 3px solid;
+  border-image: linear-gradient(to right, #00ff9d, #00ff04, #a6ff00) 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+
+
+
+h2 {
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: all 0.5s;
+}
+h2:hover{
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color:  #00ff4c;
+}
+
+
+button {
+  
+	background-color: #fff;
+	color: #000000;
+  border-radius: 100px;
+	padding: 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+	margin-top: 10px;
+	cursor: pointer;
+  transition: all 0.5s ease;
+  border-color: #00e660;
+  border-width: 3px;
+  border-style: solid;
+  
+}
+
+button:hover
+{
+  
+	color: #fff;
+  background-color: #00e660;
+	padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+	
+	cursor: pointer;
+  transition: all 0.5s ease;
+  border-color: #00e660;
+  border-width: 3px;
+  border-style: solid;
+  
+}
+
+.roomList {
+  transform: translateY(-10%);
+  width:100%;
+}
+
+
+.roombox {
+  transition: all 0.3s ease;
+  color: #000;
+  width: 85%;
+  height: 15%;
+  min-height: 100px;
+  margin-left: 7.5%;
+  background-color: transparent;
+  border: 3px solid;
+  border-color: #00e660;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  
+}
+
+.roombox:hover {
+  scale: 1.1;
+  
+  color: #000;
+  width: 85%;
+  height: 15%;
+  min-height: 100px;
+  background-color: transparent;
+  border: 3px solid;
+  border-color: #00e660;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+
+.roombox button {
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  
+  background-color: #ffffff;
+	color: #000000;
+  border-radius: 100px;
+	padding: 10px 20px;
+  margin-left: 72,5%;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+	
+	cursor: pointer;
+  transition: all 0.5s ease;
+  border-color: #00e660;
+  border-width: 3px;
+  border-style: solid;
+  transition: all 0.5s;
+
+  
+}
+
+.roombox button:hover {
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  
+  background-color: #00e660;
+	color: #ffffff;
+  border-radius: 100px;
+	padding: 10px 20px;
+  margin-left: 72,5%;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+	
+	cursor: pointer;
+  transition: all 0.5s ease;
+  border-color: #00e660;
+  border-width: 3px;
+  border-style: solid;
+
+  
+}
+
+.roombox h4{
+  display: flex;
+  align-items: center;
+  height: 7.5%;
+  font-size: 30dp;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.meldungcontainer {
+  text-align: center;
+  justify-content: center;
+}
+
+.meldungcontainer h1{
+  font-weight: bold;
+   --bg-size: 400%;
+  --color-one: hsl(170, 100%, 50%);
+  --color-two: hsl(121, 100%, 50%);
+  font-size: clamp(3rem, 25vmin, 8rem);
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 8s infinite linear;
+
+
+
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+.roomMenue {
+  transform: translateY(-10%);
+  width:100%;
+}
+
+.menueBox {
+  transition: all 0.3s ease;
+  color: #000;
+  width: 85%;
+  height: 15%;
+  min-height: 100px;
+  margin-left: 7.5%;
+  background-color: transparent;
+  border: 3px solid;
+  border-color: #00e660;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.roomMenue h4{
+  margin: 30px;
+  font-weight: bold;
+  
+}
+
+.roomMenue p{
+  font-weight: bold;
+  
+}
+
+
+.mainGameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  width: 85%;
+  height: 70vh;
+  min-height: 100px;
+  margin-left: 7.5%;
+  background-color: transparent;
+  border: 3px solid;
+  border-color: #00ff88;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 5%;
+}
+
+.mainGameCaption {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 0px;
+}
+
+.mainGameRound {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.mainGameInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.mainGameInput label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.mainGameInput input {
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+table {
+  margin-top: 40px;
+  width: 70vw;
+  margin-left: 15%;
+  border-collapse: collapse;
+  width: fit-content;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table th,
+table td {
+  width: fit-content;
+  border: 3px solid #00ff6e;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+

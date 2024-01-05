@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <title>101 Numbers!</title>
+</head>
+<body>
+
+  
+  <div class="top-bar">
+    <div class="logo">101 Numbers!</div>
+    
+  </div>
+
+  <div class="container-wrapper" id="container-wrapper">
+    <div class="container">
+      <h2>When opening a room you are the Host and other players may join you.</h2>
+      <button id="openroom" onclick="roomdialog.showModal()">Open Room</button>
+    </div>
+
+    <div class="container">
+      <h2>When joining a room you are able to join an existing room.</h2>
+      <button id="joinroom" onclick="joindialog.showModal()">Join Room</button>
+    </div>
+  </div>
+
+  <dialog id="joindialog">
+    <div class="dialog-content">
+      <h3>Enter your name:</h3>
+      <input type="text" id="namea-input">
+      <button onclick="joindialog.close(),newPlayer()">Submit</button>
+    </div>
+  </dialog>
+
+  <dialog id="roomdialog">
+    <div class="dialog-content">
+      <h3>Enter your room name:</h3>
+      <input type="text" id="room-input">
+      <h3>Enter your name:</h3>
+      <input type="text" id="nameb-input">
+      <button onclick="roomdialog.close(),openRoom()">Submit</button>
+    </div>
+  </dialog>
+
+  <div id="roomList" class="roomList"></div>  
+  <div id="meldungcontainer" class="meldungcontainer"><h1 id="meldung"></h1></div>
+  <div id="roomMenue" class="roomMenue"></div>
+
+
+  
+
+   <div id="mainGameContainer" class="mainGameContainer">
+    <div id="mainGameCaption" class="mainGameCaption">Raumname</div>
+    <div id="mainGameRound"class="mainGameRound">Runde: 1</div>
+     
+    <div class="mainGameInput">
+      <label>Pick a number between 0 and 100. The one closest to the average of all players times 0.8 wins.</label>
+      <input id="mainGameInput" type="numbers" />
+      <button id="inputbutton" onclick="sendGameInput(), hideInputButton()">Submit</button>
+    </div>
+    <div id='table-container' class='table-container'></div>
+    <h1 id="result">Average ⨉ 0.8 =</h1>
+    <h1 id="winner"></h1>
+     
+
+    <!--<div id="round-time-bar" class="round-time-bar"  data-style="smooth" style="--duration: 60;">
+    <div></div>
+    </div>-->
+     
+  </div>
+  
+  
+  <script src="/socket.io/socket.io.js"></script> <!-- use the library -->
+  <script src="/script.js"></script> <!-- use "script.js" file --> 
+</body>
+</html>
