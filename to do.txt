@@ -1,4 +1,3 @@
 alert preventing the sending of the input fields fix //done
 calculating winner correctly 
 what happens if a game is ended or everyone leaves ? what to do if someone leaves during game ? 
-fabian hat gesocket display block inline könnte klappen 
