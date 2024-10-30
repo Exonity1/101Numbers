@@ -138,7 +138,7 @@ class Spielerverwaltung {
     return this.roomId;
   }
 
-  gibrunde() {
+  gibrunde() {    //Comment from older me: einfach getter in javascript programmiert XD
     return this.runde;
   }
 
